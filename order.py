@@ -6,17 +6,23 @@ def connect(end_point, post):
     response = requests.post(end_point, data=post, headers=headers)
     if response.status_code == 200:
         return response.json()
+    else:
+        print(f"Error: {response.status_code}")
     return False
 
 # Contoh membuat pesanan
-api_url = cok.url
-post_data = {
-    'api_key': cok.api_key,
-    'action': 'order',
-    'secret_key': cok.secret_key,
-    'service': 1,
-    'data': 'nasa',
-    'quantity': 150
-}
-api_response = connect(api_url, post_data)
-print(api_response)
+def make_order():
+    api_url = cok.url
+    post_data = {
+        'api_key': cok.api_key,
+        'action': 'order',
+        'secret_key': cok.secret_key,
+        'service': 1,
+        'data': 'nasa',
+        'quantity': 150
+    }
+    api_response = connect(api_url, post_data)
+    print(api_response)
+
+if __name__ == "__main__":
+    make_order()
