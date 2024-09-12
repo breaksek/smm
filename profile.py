@@ -1,6 +1,17 @@
-import requests
-import data as data
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
+try:
+    import requests
+    import os
+except Exception as k:
+    exit(f"\n [•] Modul {k} tidak ditemukan")
+
+try:
+    import data as data
+except Exception as ko:
+    exit(f" [•] File {ko} Tidak ada")
+    
 def connect(end_point, post):
     headers = {'User-Agent': 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)'}
     response = requests.post(end_point, data=post, headers=headers)
