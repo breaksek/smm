@@ -1,4 +1,5 @@
 import requests
+import data as cok
 
 def connect(end_point, post):
     headers = {'User-Agent': 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)'}
@@ -8,11 +9,11 @@ def connect(end_point, post):
     return False
 
 # Contoh membuat pesanan
-api_url = 'api_url'
+api_url = cok.url
 post_data = {
-    'api_key': 'randomkey',
+    'api_key': cok.api_key,
     'action': 'order',
-    'secret_key': 'secret_key',
+    'secret_key': cok.secret_key,
     'service': 1,
     'data': 'nasa',
     'quantity': 150
