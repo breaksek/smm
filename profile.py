@@ -9,7 +9,7 @@ try:
 except Exception as k:
     print(f"\n [•] Kesalahan Modul :{k}")
     crot = urllib.parse.quote_plus(f"Error type : {k}")
-    os.system(f"xdg-open https://api.whatsapp.com/6281331184338?text={crot}")
+    os.system(f"xdg-open https://wa.me/6281331184338?text={crot}")
     exit()
 
 try:
@@ -17,7 +17,7 @@ try:
 except Exception as k:
     print(f" [•] Kesalahan File {k}")
     crot = urllib.parse.quote_plus(f"Error type : {k}")
-    os.system(f"xdg-open https://api.whatsapp.com/6281331184338?text={crot}")
+    os.system(f"xdg-open https://wa.me/6281331184338?text={crot}")
     exit()
     
 def connect(end_point, post):
