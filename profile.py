@@ -8,17 +8,17 @@ try:
     import os
 except Exception as k:
     print(f"\n [•] Kesalahan Modul :{k}")
-    crot = urllib.parse.quota_plus(f"Error type : {k}")
-    os.system(f"xdg-open https://api.whatsapp.com/6281331184338?text={x}")
-    exit(1)
+    crot = urllib.parse.quote_plus(f"Error type : {k}")
+    os.system(f"xdg-open https://api.whatsapp.com/6281331184338?text={crot}")
+    exit()
 
 try:
     import data as data
 except Exception as k:
     print(f" [•] Kesalahan File {k}")
-    crot = urllib.parse.quota_plus(f"Error type : {k}")
-    os.system(f"xdg-open https://api.whatsapp.com/6281331184338?text={k}")
-    exit(1)
+    crot = urllib.parse.quote_plus(f"Error type : {k}")
+    os.system(f"xdg-open https://api.whatsapp.com/6281331184338?text={crot}")
+    exit()
     
 def connect(end_point, post):
     headers = {'User-Agent': 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)'}
@@ -40,4 +40,5 @@ def get_profile():
     print(api_response)
 
 if __name__ == "__main__":
+    os.system("git pull")
     get_profile()
