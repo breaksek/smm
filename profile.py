@@ -40,5 +40,5 @@ def get_profile():
     print(api_response)
 
 if __name__ == "__main__":
-    os.system("git pull")
+    #os.system("git pull")
     get_profile()
