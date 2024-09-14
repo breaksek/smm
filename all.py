@@ -21,15 +21,17 @@ def produk():
     print(api_response)
 
 def order():
-    api_url = data.api_url
+    api_url = d.api_url
     post_data = {
-        'api_key': 'randomkey',
+        'api_key': d.api_key,
+        'secret_key': d.secret_key,
         'action': 'order',
-        'secret_key': 'secret_key',
-        'service': 1,
-        'data': 'nasa',
-        'quantity': 150
+        'service': idservice,
+        'data': target,
+        'quantity': jumlah
     }
+    target = input(" [•] Masukkan alamat target : ")
+    jumlah = int(input("[•] Masukkan jumlah pesanan : "))
     api_response = connect(api_url, post_data)
     print(api_response)
 
@@ -55,3 +57,6 @@ def profile():
     
     api_response = connect(api_url, post_data)
     print(api_response)
+
+if __name__ == "__main__" :
+    list()
