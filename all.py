@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import requests
-import data as d
+import src.config as d
 
 def connect(end_point, post):
     headers = {'User-Agent': 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)'}
@@ -20,7 +20,8 @@ def produk():
     api_response = connect(api_url, post_data)
     print(api_response)
 
-def ceksrc(file_path):
+def ceksrc():
+    file_path = "./src/config.py"
     if os.path.exists(file_path):
         print(f"File '{file_path}' exists.")
         return True
