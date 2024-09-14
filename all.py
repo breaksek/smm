@@ -19,17 +19,10 @@ def produk():
     }
     api_response = connect(api_url, post_data)
     print(api_response)
-
-def ceksrc():
-    file_path = "./src/config.py"
-    if os.path.exists(file_path):
-        print(f"File '{file_path}' exists.")
-        return True
-    else:
-        print(f"File '{file_path}' does not exist.")
-        return False
-
+        
 def order():
+    target = input(" [•] Masukkan alamat target : ")
+    jumlah = int(input("[•] Masukkan jumlah pesanan : "))
     api_url = d.api_url
     post_data = {
         'api_key': d.api_key,
@@ -39,10 +32,8 @@ def order():
         'data': target,
         'quantity': jumlah
     }
-    target = input(" [•] Masukkan alamat target : ")
-    jumlah = int(input("[•] Masukkan jumlah pesanan : "))
-    api_response = connect(api_url, post_data)
-    print(api_response)
+    send = connect(api_url, post_data)
+    print(send)
 
 def cekorder():
     api_url = d.api_url
