@@ -54,7 +54,11 @@ def profile():
         'action': 'profile'
     }
     api_response = connect(api_url, post_data)
-    print(api_response)
+    if api_response and 'data' in api_response:
+        username = api_response['data'].get('username', 'Username tidak ditemukan')
+        print(f"Username: {username}")
+    else:
+        print("Gagal mendapatkan profil atau data tidak ada")
 
 if __name__ == "__main__" :
     list()
