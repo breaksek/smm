@@ -9,7 +9,7 @@ def connect(end_point, post):
         return response.json()
     return False
 
-# Contoh menampilkan layanan
+def produk():
 api_url = 'https://buzzerpanel.id/api/json.php'
 post_data = {
     'api_key': 'randomkey',
@@ -19,7 +19,7 @@ post_data = {
 api_response = connect(api_url, post_data)
 print(api_response)
 
-# Contoh membuat pesanan
+def order():
 api_url = 'api_url'
 post_data = {
     'api_key': 'randomkey',
@@ -32,7 +32,7 @@ post_data = {
 api_response = connect(api_url, post_data)
 print(api_response)
 
-# Contoh mengecek status pesanan
+def cekorder():
 api_url = 'api_url'
 post_data = {
     'api_key': 'randomkey',
@@ -43,7 +43,7 @@ post_data = {
 api_response = connect(api_url, post_data)
 print(api_response)
 
-# Contoh mengecek profil akun
+def profile():
 api_url = 'api_url'
 post_data = {
     'api_key': 'randomkey',
