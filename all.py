@@ -11,45 +11,47 @@ def connect(end_point, post):
     return False
 
 def produk():
-api_url = d.api_url
-post_data = {
-    'api_key': d.api_key,
-    'secret_key': d.secret_key,
-    'action': 'services'
-}
-api_response = connect(api_url, post_data)
-print(api_response)
+    api_url = d.api_url
+    post_data = {
+        'api_key': d.api_key,
+        'secret_key': d.secret_key,
+        'action': 'services'
+    }
+    api_response = connect(api_url, post_data)
+    print(api_response)
 
 def order():
-api_url = 'api_url'
-post_data = {
-    'api_key': 'randomkey',
-    'action': 'order',
-    'secret_key': 'secret_key',
-    'service': 1,
-    'data': 'nasa',
-    'quantity': 150
-}
-api_response = connect(api_url, post_data)
-print(api_response)
+    api_url = data.api_url
+    post_data = {
+        'api_key': 'randomkey',
+        'action': 'order',
+        'secret_key': 'secret_key',
+        'service': 1,
+        'data': 'nasa',
+        'quantity': 150
+    }
+    api_response = connect(api_url, post_data)
+    print(api_response)
 
 def cekorder():
-api_url = 'api_url'
-post_data = {
-    'api_key': 'randomkey',
-    'secret_key': 'secret_key',
-    'action': 'status',
-    'id': '9'
-}
-api_response = connect(api_url, post_data)
-print(api_response)
+    api_url = d.api_url
+    post_data = {
+        'api_key': d.api_key,
+        'secret_key': d.secret_key,
+        'action': 'status',
+        'id': '9'
+    }
+    
+    api_response = connect(api_url, post_data)
+    print(api_response)
 
 def profile():
-api_url = 'api_url'
-post_data = {
-    'api_key': 'randomkey',
-    'secret_key': 'secret_key',
-    'action': 'profile'
-}
-api_response = connect(api_url, post_data)
-print(api_response)
+    api_url = d.api_url
+    post_data = {
+        'api_key': d.api_key,
+        'secret_key': d.secret_key,
+        'action': 'profile'
+    }
+    
+    api_response = connect(api_url, post_data)
+    print(api_response)
