@@ -52,7 +52,6 @@ def cekorder():
         'action': 'status',
         'id': '9'
     }
-    
     api_response = connect(api_url, post_data)
     print(api_response)
 
@@ -63,7 +62,6 @@ def profile():
         'secret_key': d.secret_key,
         'action': 'profile'
     }
-    
     api_response = connect(api_url, post_data)
     print(api_response)
 
