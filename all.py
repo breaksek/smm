@@ -1,7 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 import requests
 import src.config as d
+try:
+    import requests
+    import os
+except Exception as k:
+    print(f"\n [•] Kesalahan Modul :{k}")
+    crot = urllib.parse.quote_plus(f"Error type : {k}")
+    os.system(f"xdg-open https://wa.me/6281331184338?text={crot}")
+    exit()
 
 def connect(end_point, post):
     headers = {'User-Agent': 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)'}
