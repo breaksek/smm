@@ -20,6 +20,14 @@ def produk():
     api_response = connect(api_url, post_data)
     print(api_response)
 
+def ceksrc(file_path):
+    if os.path.exists(file_path):
+        print(f"File '{file_path}' exists.")
+        return True
+    else:
+        print(f"File '{file_path}' does not exist.")
+        return False
+
 def order():
     api_url = d.api_url
     post_data = {
